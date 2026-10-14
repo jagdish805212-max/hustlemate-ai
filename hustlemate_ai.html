@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="HustleMate AI: a local-first toolkit for freelancers to draft client messages, create invoices, and track expenses.">
+<title>HustleMate AI — Your Side-Hustle Toolkit</title>
+<style>
+:root{--bg:#f6f7fb;--panel:#fff;--ink:#182033;--muted:#687188;--line:#e7eaf2;--brand:#6558e8;--brand2:#8c62f4;--mint:#dff8ed;--shadow:0 12px 35px rgba(35,42,80,.07)}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font-family:Inter,ui-sans-serif,system-ui,-apple-system,"Segoe UI",sans-serif}button,input,textarea,select{font:inherit}button{cursor:pointer}.shell{max-width:1180px;margin:auto;padding:24px}.topbar{display:flex;align-items:center;justify-content:space-between;gap:16px;margin-bottom:28px}.brand{display:flex;align-items:center;gap:11px;font-size:21px;font-weight:850;letter-spacing:-.6px}.logo{width:42px;height:42px;border-radius:14px;background:linear-gradient(135deg,var(--brand),var(--brand2));display:grid;place-items:center;color:#fff;font-weight:900;font-size:20px;box-shadow:0 7px 18px #6558e844}.pill{font-size:12px;font-weight:750;background:#eeebff;color:#5749d6;padding:8px 12px;border-radius:99px}.hero{background:linear-gradient(120deg,#201c4b,#4434a8 55%,#8d63ed);border-radius:25px;padding:34px;color:#fff;display:grid;grid-template-columns:1.4fr .8fr;gap:20px;overflow:hidden;position:relative}.eyebrow{text-transform:uppercase;letter-spacing:1.8px;font-size:11px;font-weight:800;color:#cfc9ff}.hero h1{font-size:clamp(32px,5vw,49px);line-height:1.06;letter-spacing:-1.8px;margin:13px 0}.hero p{max-width:570px;color:#e3e0ff;line-height:1.65;margin:0 0 20px}.hero-art{align-self:center;justify-self:center;width:min(100%,280px);aspect-ratio:1;border:1px solid #ffffff35;border-radius:30px;background:#ffffff12;display:grid;place-items:center;transform:rotate(4deg)}.hero-art .big{font-size:100px;filter:drop-shadow(0 12px 15px #160e4b77)}.hero-art .float{font-size:13px;background:#fff;color:#30256e;border-radius:12px;padding:10px 13px;font-weight:800;position:absolute;bottom:28px;left:-15px;transform:rotate(-4deg);box-shadow:var(--shadow)}.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin:18px 0 26px}.stat,.panel,.tool-card{background:var(--panel);border:1px solid var(--line);border-radius:19px;box-shadow:var(--shadow)}.stat{padding:17px 20px}.stat small{color:var(--muted);font-weight:650}.stat strong{display:block;font-size:25px;margin-top:7px;letter-spacing:-.7px}.section-head{display:flex;justify-content:space-between;align-items:end;gap:12px;margin:26px 0 14px}.section-head h2{margin:0;font-size:22px;letter-spacing:-.6px}.section-head p{margin:5px 0 0;color:var(--muted);font-size:13px}.tools{display:grid;grid-template-columns:repeat(3,1fr);gap:15px}.tool-card{padding:20px;min-width:0}.tool-icon{height:44px;width:44px;border-radius:14px;background:#efedff;display:grid;place-items:center;font-size:22px}.tool-card h3{margin:14px 0 6px;font-size:17px}.tool-card p{color:var(--muted);font-size:13px;line-height:1.55;margin:0 0 15px}.btn{border:0;border-radius:11px;background:var(--brand);color:white;padding:11px 15px;font-weight:750;font-size:13px;transition:.15s}.btn:hover{filter:brightness(1.06);transform:translateY(-1px)}.btn.secondary{background:#f0efff;color:#5548d2}.btn.ghost{background:#f3f5f9;color:#344056}.btn:disabled{opacity:.55;cursor:wait;transform:none}.panel{padding:22px;margin-top:16px}.panel-head{display:flex;justify-content:space-between;align-items:center;gap:12px;margin-bottom:16px}.panel h2{font-size:19px;margin:0}.panel-head p{font-size:12px;color:var(--muted);margin:5px 0 0}.grid2{display:grid;grid-template-columns:1fr 1fr;gap:12px}.field{display:flex;flex-direction:column;gap:6px;margin-bottom:12px}.field label{font-size:12px;color:#505b73;font-weight:750}.field input,.field textarea,.field select{width:100%;border:1px solid #dfe3ee;border-radius:10px;padding:11px 12px;outline:none;background:#fff;color:var(--ink)}.field input:focus,.field textarea:focus,.field select:focus{border-color:var(--brand);box-shadow:0 0 0 3px #6558e81c}.field textarea{resize:vertical;min-height:92px}.actions{display:flex;gap:9px;flex-wrap:wrap}.result{margin-top:14px;background:#f8f8ff;border:1px solid #e7e4ff;border-radius:13px;padding:15px;line-height:1.6;white-space:pre-wrap;font-size:14px;min-height:50px}.notice{font-size:12px;color:var(--muted);line-height:1.55;margin-top:10px}.notice strong{color:#414b61}.hidden{display:none!important}.table-wrap{overflow-x:auto}table{border-collapse:collapse;width:100%;font-size:13px}th,td{text-align:left;padding:12px 9px;border-bottom:1px solid var(--line);white-space:nowrap}th{color:var(--muted);font-size:11px;text-transform:uppercase;letter-spacing:.7px}.empty{text-align:center;color:var(--muted);padding:22px}.positive{color:#16845b;font-weight:800}.negative{color:#bd4b5a;font-weight:800}.invoice-preview{background:white;border:1px solid var(--line);padding:24px;border-radius:12px;margin-top:16px}.invoice-preview h3{font-size:25px;margin:0 0 8px}.invoice-total{text-align:right;font-size:23px;font-weight:850;margin-top:16px}.footer{text-align:center;color:var(--muted);font-size:12px;padding:30px 0 10px}.toast{position:fixed;right:20px;bottom:20px;background:#1f2440;color:white;padding:13px 17px;border-radius:12px;box-shadow:var(--shadow);opacity:0;transform:translateY(10px);transition:.2s;pointer-events:none}.toast.show{opacity:1;transform:translateY(0)}@media(max-width:850px){.hero{grid-template-columns:1fr}.hero-art{display:none}.tools{grid-template-columns:1fr}.stats{grid-template-columns:1fr 1fr}.stats .stat:last-child{grid-column:span 2}}@media(max-width:520px){.shell{padding:14px}.hero{padding:24px}.topbar{align-items:flex-start}.pill{max-width:140px;text-align:center}.stats{gap:8px}.stat{padding:13px}.stat strong{font-size:21px}.grid2{grid-template-columns:1fr}.panel{padding:16px}.section-head{align-items:flex-start;flex-direction:column}}
+</style>
+</head>
+<body>
+<div class="shell">
+  <header class="topbar">
+    <div class="brand"><div class="logo">H</div> HustleMate <span style="color:var(--brand)">AI</span></div>
+    <div class="pill">✦ OPEN-SOURCE AI PROJECT</div>
+  </header>
+  <section class="hero">
+    <div>
+      <div class="eyebrow">Your side hustle, simplified</div>
+      <h1>Less admin.<br>More earning.</h1>
+      <p>A practical mini-workspace for freelancers and small sellers. Draft client messages, make invoices, and keep an eye on your cash flow—all from one simple dashboard.</p>
+      <button class="btn" onclick="document.getElementById('writer').scrollIntoView({behavior:'smooth'})">Try the AI writer ↓</button>
+    </div>
+    <div class="hero-art" aria-hidden="true"><div class="big">✦</div><div class="float">Your next client starts here ↗</div></div>
+  </section>
+
+  <section class="stats" aria-label="Your finances">
+    <div class="stat"><small>Total income</small><strong id="incomeStat">₹0</strong></div>
+    <div class="stat"><small>Total expenses</small><strong id="expenseStat">₹0</strong></div>
+    <div class="stat"><small>Net balance</small><strong id="balanceStat">₹0</strong></div>
+  </section>
+
+  <div class="section-head"><div><h2>Your toolkit</h2><p>Three useful tools for a one-person business.</p></div></div>
+  <section class="tools">
+    <article class="tool-card"><div class="tool-icon">✍️</div><h3>AI Client Writer</h3><p>Draft proposals, product listings, and polite follow-ups with an open-weight language model running in your browser.</p><button class="btn secondary" onclick="document.getElementById('writer').scrollIntoView({behavior:'smooth'})">Write something</button></article>
+    <article class="tool-card"><div class="tool-icon">🧾</div><h3>Invoice Maker</h3><p>Create a clean invoice with your client, service, quantity, and price. Print it or save it to PDF.</p><button class="btn secondary" onclick="document.getElementById('invoice').scrollIntoView({behavior:'smooth'})">Create invoice</button></article>
+    <article class="tool-card"><div class="tool-icon">📊</div><h3>Expense Tracker</h3><p>Log income and expenses and see your totals. Your records stay in this browser using localStorage.</p><button class="btn secondary" onclick="document.getElementById('expenses').scrollIntoView({behavior:'smooth'})">Track money</button></article>
+  </section>
+
+  <section class="panel" id="writer">
+    <div class="panel-head"><div><h2>✦ AI Client Writer</h2><p>Generate a first draft, then edit it to sound like you.</p></div><span class="pill" id="modelStatus">Model not loaded</span></div>
+    <div class="grid2">
+      <div class="field"><label for="writeType">What do you need?</label><select id="writeType"><option value="service listing">Service listing</option><option value="client proposal">Client proposal</option><option value="polite follow-up message">Polite follow-up</option><option value="product description">Product description</option><option value="social media caption">Social media caption</option></select></div>
+      <div class="field"><label for="tone">Tone</label><select id="tone"><option>Friendly and professional</option><option>Confident and concise</option><option>Warm and creative</option></select></div>
+    </div>
+    <div class="field"><label for="businessInfo">Describe your service, product, or situation</label><textarea id="businessInfo" placeholder="Example: I design affordable logos for local cafés. Includes 2 concepts and 1 revision."></textarea></div>
+    <div class="actions"><button class="btn" id="loadModelBtn">Load open model</button><button class="btn" id="generateBtn">Generate draft</button><button class="btn ghost" id="copyDraftBtn">Copy draft</button></div>
+    <div class="result" id="writerResult" aria-live="polite">Your draft will appear here.</div>
+    <p class="notice"><strong>Open-source AI note:</strong> The optional model uses Transformers.js and the open-weight <code>Xenova/flan-t5-small</code> model in the browser. The first load needs internet to download the library/model and may take a while. After downloading, the browser can cache model files; fully offline use depends on browser cache and setup. If model loading fails, this demo falls back to a simple template helper—do not describe that fallback as AI.</p>
+  </section>
+
+  <section class="panel" id="invoice">
+    <div class="panel-head"><div><h2>🧾 Invoice Maker</h2><p>Fill in the details and create a print-ready invoice.</p></div></div>
+    <div class="grid2">
+      <div class="field"><label for="yourName">Your name / business</label><input id="yourName" placeholder="Your Studio"></div>
+      <div class="field"><label for="clientName">Client name</label><input id="clientName" placeholder="Client or company"></div>
+      <div class="field"><label for="serviceName">Service / item</label><input id="serviceName" placeholder="Website design"></div>
+      <div class="grid2">
+        <div class="field"><label for="quantity">Quantity</label><input id="quantity" type="number" min="1" value="1"></div>
+        <div class="field"><label for="unitPrice">Price (₹)</label><input id="unitPrice" type="number" min="0" value="1500"></div>
+      </div>
+    </div>
+    <div class="actions"><button class="btn" id="makeInvoiceBtn">Generate invoice</button><button class="btn ghost" id="printInvoiceBtn">Print / Save PDF</button></div>
+    <div id="invoicePreview" class="invoice-preview hidden"></div>
+  </section>
+
+  <section class="panel" id="expenses">
+    <div class="panel-head"><div><h2>📊 Money tracker</h2><p>Demo records are stored in this browser, not on a server.</p></div><button class="btn ghost" id="clearTransactionsBtn">Clear all</button></div>
+    <div class="grid2">
+      <div class="field"><label for="transactionTitle">Description</label><input id="transactionTitle" placeholder="Logo design payment"></div>
+      <div class="field"><label for="transactionAmount">Amount (₹)</label><input id="transactionAmount" type="number" min="1" placeholder="2500"></div>
+      <div class="field"><label for="transactionType">Type</label><select id="transactionType"><option value="income">Income</option><option value="expense">Expense</option></select></div>
+      <div class="field"><label for="transactionCategory">Category</label><select id="transactionCategory"><option>Freelance</option><option>Supplies</option><option>Travel</option><option>Software</option><option>Food</option><option>Other</option></select></div>
+    </div>
+    <button class="btn" id="addTransactionBtn">+ Add transaction</button>
+    <div class="table-wrap" style="margin-top:16px"><table><thead><tr><th>Description</th><th>Category</th><th>Type</th><th>Amount</th><th></th></tr></thead><tbody id="transactionRows"></tbody></table></div>
+    <p class="notice">Privacy: localStorage is convenient for a prototype, but it is not encrypted, shared across devices, or a backup. Do not store sensitive client or payment information here.</p>
+  </section>
+  <footer class="footer">Built with HTML, CSS & JavaScript · Local-first prototype · HustleMate AI</footer>
+</div>
+<div class="toast" id="toast" role="status"></div>
+<script>
+const $ = id => document.getElementById(id);
+const money = n => new Intl.NumberFormat('en-IN',{style:'currency',currency:'INR',maximumFractionDigits:2}).format(n);
+function toast(message){const el=$('toast');el.textContent=message;el.classList.add('show');setTimeout(()=>el.classList.remove('show'),2400)}
+function safe(text){return String(text).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]))}
+let transactions=[];
+try{transactions=JSON.parse(localStorage.getItem('hustlemate_transactions')||'[]');if(!Array.isArray(transactions))transactions=[]}catch{transactions=[]}
+function saveTransactions(){try{localStorage.setItem('hustlemate_transactions',JSON.stringify(transactions))}catch{toast('Could not save in this browser.')}}
+function renderTransactions(){
+ const rows=$('transactionRows');rows.innerHTML='';
+ if(!transactions.length){rows.innerHTML='<tr><td colspan="5" class="empty">No transactions yet. Add your first one above.</td></tr>'}
+ transactions.forEach(t=>{const tr=document.createElement('tr');tr.innerHTML=`<td>${safe(t.title)}</td><td>${safe(t.category)}</td><td>${safe(t.type)}</td><td class="${t.type==='income'?'positive':'negative'}">${t.type==='income'?'+':'−'}${money(t.amount)}</td><td><button class="btn ghost" data-delete="${safe(t.id)}" aria-label="Delete ${safe(t.title)}">Delete</button></td>`;rows.appendChild(tr)});
+ const income=transactions.filter(t=>t.type==='income').reduce((s,t)=>s+t.amount,0);
+ const expenses=transactions.filter(t=>t.type==='expense').reduce((s,t)=>s+t.amount,0);
+ $('incomeStat').textContent=money(income);$('expenseStat').textContent=money(expenses);$('balanceStat').textContent=money(income-expenses);
+}
+$('addTransactionBtn').addEventListener('click',()=>{
+ const title=$('transactionTitle').value.trim(),amount=Number($('transactionAmount').value);
+ if(!title||!Number.isFinite(amount)||amount<=0){toast('Enter a description and a valid amount.');return}
+ transactions.unshift({id:Date.now().toString(),title,amount,type:$('transactionType').value,category:$('transactionCategory').value});
+ saveTransactions();renderTransactions();$('transactionTitle').value='';$('transactionAmount').value='';toast('Transaction added.');
+});
+$('transactionRows').addEventListener('click',e=>{const b=e.target.closest('[data-delete]');if(!b)return;transactions=transactions.filter(t=>t.id!==b.dataset.delete);saveTransactions();renderTransactions()});
+$('clearTransactionsBtn').addEventListener('click',()=>{if(!transactions.length)return;if(confirm('Delete all transactions saved in this browser?')){transactions=[];saveTransactions();renderTransactions();toast('Transactions cleared.')}});
+
+function createInvoice(){
+ const seller=$('yourName').value.trim()||'Your Business',client=$('clientName').value.trim()||'Client',service=$('serviceName').value.trim()||'Service';
+ const qty=Math.max(1,Number($('quantity').value)||1),price=Math.max(0,Number($('unitPrice').value)||0),total=qty*price;
+ $('invoicePreview').innerHTML=`<div style="display:flex;justify-content:space-between;gap:15px;flex-wrap:wrap"><div><h3>INVOICE</h3><p style="color:#687188;margin:0">HustleMate AI · ${new Date().toLocaleDateString('en-IN')}</p></div><div style="text-align:right"><strong>${safe(seller)}</strong><p style="margin:5px 0;color:#687188">Bill to: ${safe(client)}</p></div></div><hr style="border:0;border-top:1px solid #e7eaf2;margin:22px 0"><table><thead><tr><th>Item / service</th><th>Qty</th><th>Unit price</th><th>Total</th></tr></thead><tbody><tr><td>${safe(service)}</td><td>${qty}</td><td>${money(price)}</td><td>${money(total)}</td></tr></tbody></table><div class="invoice-total">Total: ${money(total)}</div><p style="color:#687188;font-size:12px;margin-top:24px">Thank you for your business!</p>`;
+ $('invoicePreview').classList.remove('hidden');toast('Invoice generated.');
+}
+$('makeInvoiceBtn').addEventListener('click',createInvoice);
+$('printInvoiceBtn').addEventListener('click',()=>{if($('invoicePreview').classList.contains('hidden'))createInvoice();window.print()});
+$('copyDraftBtn').addEventListener('click',async()=>{const text=$('writerResult').textContent;if(!text||text==='Your draft will appear here.')return;try{await navigator.clipboard.writeText(text);toast('Draft copied.')}catch{toast('Copy unavailable. Select the text and copy it.')}});
+
+let generator=null,modelReady=false,loading=false;
+async function loadModel(){
+ if(modelReady)return true;if(loading)return false;loading=true;$('loadModelBtn').disabled=true;$('modelStatus').textContent='Loading model…';$('writerResult').textContent='Downloading/loading the open-weight model. First use may take a few minutes; keep this tab open.';
+ try{
+  const {pipeline,env}=await import('https://cdn.jsdelivr.net/npm/@xenova/transformers@2.17.2');
+  env.allowLocalModels=false;env.useBrowserCache=true;
+  generator=await pipeline('text2text-generation','Xenova/flan-t5-small',{progress_callback:(p)=>{if(p.status==='progress'&&p.total)$('modelStatus').textContent=`Loading ${Math.round(p.progress||0)}%`}});
+  modelReady=true;$('modelStatus').textContent='Open model ready';$('writerResult').textContent='Model ready! Describe your service above and click Generate draft.';return true;
+ }catch(err){console.error(err);$('modelStatus').textContent='Model unavailable';$('writerResult').textContent='The model could not load. Check your internet connection and try again. You can still use the basic template fallback by clicking Generate draft.';return false}
+ finally{loading=false;$('loadModelBtn').disabled=false}
+}
+$('loadModelBtn').addEventListener('click',loadModel);
+function fallbackDraft(type,info,tone){
+ const opener=tone.includes('Confident')?'Here is a clear, practical option for your needs.':tone.includes('Warm')?'I would love to help bring your idea to life.':'Thanks for sharing the details.';
+ return `${type.charAt(0).toUpperCase()+type.slice(1)}\n\n${opener}\n\n${info}\n\nWhat you can expect:\n• Clear communication and agreed next steps\n• A focus on quality and your requirements\n• An opportunity to review the work and share feedback\n\nIf this sounds useful, let’s discuss your timeline and budget.`;
+}
+$('generateBtn').addEventListener('click',async()=>{
+ const info=$('businessInfo').value.trim(),type=$('writeType').value,tone=$('tone').value;
+ if(!info){toast('Describe your product, service, or situation first.');return}
+ if(!modelReady){$('writerResult').textContent=fallbackDraft(type,info,tone)+'\n\n[Template fallback: the AI model is not loaded.]';$('modelStatus').textContent='Template mode';return}
+ const btn=$('generateBtn');btn.disabled=true;btn.textContent='Generating…';$('writerResult').textContent='The open model is generating a draft locally in your browser…';
+ try{
+  const prompt=`Write a useful ${type} in a ${tone} tone. Use the details below. Do not invent prices, guarantees, qualifications, or facts. Keep it concise and ready to edit.\nDetails: ${info}`;
+  const result=await generator(prompt,{max_new_tokens:160,do_sample:false});
+  $('writerResult').textContent=(result&&result[0]&&result[0].generated_text)||'No draft returned. Please try again.';
+ }catch(err){console.error(err);$('writerResult').textContent='Generation failed. Try a shorter description or reload the model.'}
+ finally{btn.disabled=false;btn.textContent='Generate draft'}
+});
+renderTransactions();
+</script>
+<style>
+@media print{body{background:white}.topbar,.hero,.stats,.section-head,.tools,#writer,#expenses,.footer,.actions{display:none!important}.shell{max-width:none;padding:0}.panel#invoice{display:block;border:0;box-shadow:none;padding:0}.panel-head{display:none}.invoice-preview{display:block!important;border:0;margin:0;padding:0}}
+</style>
+</body>
+</html>
